@@ -1,4 +1,5 @@
 /*Released to Public Domain.*/
+/*test: https://fivetechsoft.github.io/harbour_wasm/ */
 
 procedure Main()
 
@@ -110,7 +111,7 @@ function Shuffle(cString as character,nType as numeric)
 
         if (nMod==0)
             cResult:=even(cString,nType,nLen)
-        eLse
+        else
            cResult:=odd(cString,nType,nLen)
         endif
 
@@ -128,7 +129,7 @@ static function even(cString as character,nType as numeric,nLen as numeric,aMap 
 
     if (lUseMap)
         cResult:=__even(cString,nLen)
-    eLse
+    else
         lUseMap:=((valType(aMap)=="A").and.(nType==0))
         cResult:=Space(nLen)
         nTmpLen:=nLen
@@ -170,7 +171,7 @@ static function odd(cString as character,nType as character,nLen as numeric)
             cEven:=even(cTmp,nType,nLen-1)
             cLeft:=Left(cEven,1)
             cResult:=SubStr(cEven,2)+cRight+cLeft
-        eLse
+        else
             cTmp:=Right(cString,2)
             cLeft:=Left(cTmp,1)
             cRight:=Right(cTmp,1)
@@ -178,7 +179,7 @@ static function odd(cString as character,nType as character,nLen as numeric)
             cEven:=even(cTmp,nType,nLen-1)
             cResult:=cEven+cLeft
         endif
-    eLse
+    else
         cResult:=cString
     endif
 
