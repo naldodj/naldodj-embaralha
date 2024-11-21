@@ -1,0 +1,7 @@
+/* Encoding: UTF-8 (No BOM)  Notation (in 5th column):
+     * Change  ! Fix  % Optimize  + Add  - Remove  ; Comment
+   Entries may not always be in chronological/commit order.
+   See license at the end of file. */
+   
+2024-11-21 16:24 UTC naldodj
+  + src/harbour/embaralha.prg
