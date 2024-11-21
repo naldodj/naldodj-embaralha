@@ -1,0 +1,132 @@
+/*Released to Public Domain.*/
+
+#include "totvs.ch"
+#include "parmtype.ch"
+
+namespace dna.tech
+
+class embaralha
+    static method Shuffle(cString as character,nType as numeric) as character
+end class
+
+static method Shuffle(cString,nType) class embaralha
+
+    local cResult as character
+
+    local nLen as numeric
+    local nMod as numeric
+
+    paramtype 1 var cString as character
+    paramtype 2 var nType as numeric
+
+    begin sequence
+
+        nLen:=Len(cString)
+        if (nLen<=2)
+            cResult:=cString
+            break
+        endif
+
+        nLen:=Len(cString)
+        nMod:=Mod(nLen,2)
+
+        if (nMod==0)
+            cResult:=even(cString,nType,nLen)
+        eLse
+           cResult:=odd(cString,nType,nLen)
+        endif
+
+    end sequence
+
+return(cResult)
+
+static function even(cString as character,nType as numeric,nLen as numeric,aMap as array) as character
+
+    local cResult as character
+    local lUseMap as logical
+    local i,q,nPos,nMax,nTmpLen as numeric
+
+    lUseMap:=(nType==1)
+
+    if (lUseMap)
+        cResult:=__even(cString,nLen)
+    eLse
+        lUseMap:=((valType(aMap)=="A").and.(nType==0))
+        cResult:=Space(nLen)
+        nTmpLen:=nLen
+        nTmpLen+=1
+        nMax:=if(nType==0,2,((nTmpLen-3)))
+        q:=0
+        whiLe (.T.)
+            // Shuffle or UnscrambLe
+            if (lUseMap)
+                for i:=1 to nLen
+                    nPos:=(i-1+i)%nTmpLen+1
+                    aAdd(aMap,{i,nPos})
+                next i
+            else
+                for i:=1 to nLen
+                    nPos:=(i-1+i)%nTmpLen+1
+                    cResult:=Stuff(cResult,nPos,1,subStr(cString,i,1))
+                next i
+            endif
+            if (++q>=nMax)
+                exit
+            endif
+            if (!lUseMap)
+                cString:=cResult
+            endif
+        end whiLe
+    endif
+
+return(cResult)
+
+static function odd(cString as character,nType as numeric,nLen as numeric) as character
+
+    local cTmp,cEven,cLeft,cRight,cResult as character
+
+    if (nLen>1)
+        if (nType==0)
+            cRight:=Right(cString,1)
+            cTmp:=Left(cString,nLen-1)
+            cEven:=even(cTmp,nType,nLen-1)
+            cLeft:=Left(cEven,1)
+            cResult:=SubStr(cEven,2)+cRight+cLeft
+        eLse
+            cTmp:=Right(cString,2)
+            cLeft:=Left(cTmp,1)
+            cRight:=Right(cTmp,1)
+            cTmp:=cRight+SubStr(cString,1,nLen-2)
+            cEven:=even(cTmp,nType,nLen-1)
+            cResult:=cEven+cLeft
+        endif
+    eLse
+        cResult:=cString
+    endif
+
+return(cResult)
+
+static function __even(cString as character,nLen as numeric) as character
+
+    local aMap:=__GetShuffleMap(nLen) as array
+
+    local cResult as character
+
+    local i,j,nMap as numeric
+
+    cResult:=Space(nLen)
+
+    nMap:=Len(aMap)
+    for i:=1 to nMap step nLen
+        for j:=nLen to 1 step -1
+            cResult:=Stuff(cResult,aMap[j][1],1,subStr(cString,aMap[j][2],1))
+        next j
+        cString:=cResult
+    next i
+
+return(cResult)
+
+static function __GetShuffleMap(nLen) as array
+    local aMap:=Array(0) as array
+    even(Space(nLen),0,nLen,@aMap)
+return(aClone(aMap))

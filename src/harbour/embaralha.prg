@@ -1,4 +1,4 @@
-// Released to Public Domain.
+/*Released to Public Domain.*/
 
 procedure Main()
 
@@ -90,7 +90,7 @@ procedure Main()
 
 return
 
-function Shuffle(cString as character,nType as character)
+function Shuffle(cString as character,nType as numeric)
 
     local cResult as character
 
@@ -118,7 +118,7 @@ function Shuffle(cString as character,nType as character)
 
 return(cResult) as character
 
-static function even(cString as character,nType as character,nLen as numeric,aMap as array)
+static function even(cString as character,nType as numeric,nLen as numeric,aMap as array)
 
     local cResult as character
     local lUseMap as logical
@@ -202,27 +202,12 @@ static function __even(cString as character,nLen as numeric)
         cString:=cResult
     next i
 
-    //cResult:=Reverse(cResult,nLen)
-
 return(cResult) as character
 
 static function __GetShuffleMap(nLen)
-    local aMap:=Array(0)
+    local aMap as array:=Array(0)
     even(Space(nLen),0,nLen,@aMap)
-return(aClone(aMap))
-
-static function Reverse(c,n)
-
-    local s as character
-    local y as numeric
-
-    s:=""
-    y:=n
-    while (y>0)
-        s+=SubStr(c,y--,1)
-    end while
-
-return(s) as character
+return(aClone(aMap)) as array
 
 /*
     cCRLF:=chr(13)+chr(10)

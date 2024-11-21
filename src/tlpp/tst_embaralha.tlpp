@@ -1,0 +1,88 @@
+#include "totvs.ch"
+
+using namespace dna.tech
+
+procedure u_TstEmbaralha()
+
+    local cCRLF:=CRLF
+    local cEmbaralha as character
+
+    cEmbaralha:="Embaralha('1',0)=>"+Embaralha("1",0)+cCRLF
+    cEmbaralha+="Embaralha('12',0)=>"+Embaralha("12",0)+cCRLF
+    cEmbaralha+="Embaralha('123',0)=>"+Embaralha("123",0)+cCRLF
+    cEmbaralha+="Embaralha('1234',0)=>"+Embaralha("1234",0)+cCRLF
+    cEmbaralha+="Embaralha('12345',0)=>"+Embaralha("12345",0)+cCRLF
+    cEmbaralha+="Embaralha('123456',0)=>"+Embaralha("123456",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567',0)=>"+Embaralha("1234567",0)+cCRLF
+    cEmbaralha+="Embaralha('12345678',0)=>"+Embaralha("12345678",0)+cCRLF
+    cEmbaralha+="Embaralha('123456789',0)=>"+Embaralha("123456789",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890',0)=>"+Embaralha("1234567890",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890A',0)=>"+Embaralha("1234567890A",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890AB',0)=>"+Embaralha("1234567890AB",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABC',0)=>"+Embaralha("1234567890ABC",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCD',0)=>"+Embaralha("1234567890ABCD",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDE',0)=>"+Embaralha("1234567890ABCDE",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEF',0)=>"+Embaralha("1234567890ABCDEF",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFG',0)=>"+Embaralha("1234567890ABCDEFG",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGH',0)=>"+Embaralha("1234567890ABCDEFGH",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHI',0)=>"+Embaralha("1234567890ABCDEFGHI",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJ',0)=>"+Embaralha("1234567890ABCDEFGHIJ",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJK',0)=>"+Embaralha("1234567890ABCDEFGHIJK",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKL',0)=>"+Embaralha("1234567890ABCDEFGHIJKL",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLM',0)=>"+Embaralha("1234567890ABCDEFGHIJKLM",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMN',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMN",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNO',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNO",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOP',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOP",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQ',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQ",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQR',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQR",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRS',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRS",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRST',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRST",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRSTU',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRSTU",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRSTUV',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRSTUV",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRSTUVW',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRSTUVW",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRSTUVWX',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRSTUVWX",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRSTUVWXY',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRSTUVWXY",0)+cCRLF
+    cEmbaralha+="Embaralha('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ',0)=>"+Embaralha("1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ",0)+cCRLF
+
+    eecView(cEmbaralha,"TOTVS")
+
+    cEmbaralha:="Embaralha():Shuffle('1',0)=>"+Embaralha():Shuffle("1",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('12',0)=>"+Embaralha():Shuffle("12",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('123',0)=>"+Embaralha():Shuffle("123",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234',0)=>"+Embaralha():Shuffle("1234",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('12345',0)=>"+Embaralha():Shuffle("12345",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('123456',0)=>"+Embaralha():Shuffle("123456",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567',0)=>"+Embaralha():Shuffle("1234567",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('12345678',0)=>"+Embaralha():Shuffle("12345678",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('123456789',0)=>"+Embaralha():Shuffle("123456789",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890',0)=>"+Embaralha():Shuffle("1234567890",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890A',0)=>"+Embaralha():Shuffle("1234567890A",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890AB',0)=>"+Embaralha():Shuffle("1234567890AB",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABC',0)=>"+Embaralha():Shuffle("1234567890ABC",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCD',0)=>"+Embaralha():Shuffle("1234567890ABCD",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDE',0)=>"+Embaralha():Shuffle("1234567890ABCDE",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEF',0)=>"+Embaralha():Shuffle("1234567890ABCDEF",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFG',0)=>"+Embaralha():Shuffle("1234567890ABCDEFG",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGH',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGH",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHI',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHI",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJ',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJ",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJK',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJK",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKL',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKL",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLM',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLM",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMN',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMN",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNO',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNO",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOP',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOP",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQ',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQ",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQR',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQR",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRS',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRS",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRST',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRST",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTU',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTU",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTUV',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTUV",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTUVW',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTUVW",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTUVWX',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTUVWX",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTUVWXY',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTUVWXY",0)+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ",0)+cCRLF
+
+    eecView(cEmbaralha,"DNA.TECH")
+
+return

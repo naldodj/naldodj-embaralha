@@ -2,6 +2,15 @@
      * Change  ! Fix  % Optimize  + Add  - Remove  ; Comment
    Entries may not always be in chronological/commit order.
    See license at the end of file. */
-   
+
+2024-11-21 17:27 UTC naldodj
+  * .gitignore
+  + src/tlpp/embaralha.tlpp
+  + src/advPL_tlPP/embaralha.tlpp
+  + src/advPL_tlPP/tst_embaralha.tlpp
+  + src/tlpp/tst_embaralha.tlpp
+  * src/harbour/embaralha.prg
+  * ChangeLog.txt
+
 2024-11-21 16:24 UTC naldodj
   + src/harbour/embaralha.prg
