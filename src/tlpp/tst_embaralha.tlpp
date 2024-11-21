@@ -83,6 +83,48 @@ procedure u_TstEmbaralha()
     cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTUVWXY',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTUVWXY",0)+cCRLF
     cEmbaralha+="Embaralha():Shuffle('1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ',0)=>"+Embaralha():Shuffle("1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ",0)+cCRLF
 
-    eecView(cEmbaralha,"DNA.TECH")
+    eecView(cEmbaralha,"DNA.TECH :: Embaralhado")
+
+    cEmbaralha:="Embaralha():Shuffle('1',1)=>"+Embaralha():Shuffle("1",1)+"OK Esperado: 1"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('12',1)=>"+Embaralha():Shuffle("12",1)+"OK Esperado: 12"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('231',1)=>"+Embaralha():Shuffle("231",1)+"OK Esperado: 123"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('4321',1)=>"+Embaralha():Shuffle("4321",1)+"OK Esperado: 1234"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('32154',1)=>"+Embaralha():Shuffle("32154",1)+"OK Esperado: 12345"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('246135',1)=>"+Embaralha():Shuffle("246135",1)+"OK Esperado: 123456"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('4613572',1)=>"+Embaralha():Shuffle("4613572",1)+"OK Esperado: 1234567"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('75318642',1)=>"+Embaralha():Shuffle("75318642",1)+"OK Esperado: 12345678 "+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('531864297',1)=>"+Embaralha():Shuffle("531864297",1)+"OK Esperado: 123456789"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('3691470258',1)=>"+Embaralha():Shuffle("3691470258",1)+"OK Esperado: 1234567890"+cCRLF
+
+    cEmbaralha+="Embaralha():Shuffle('0741A852693',1)=>"+Embaralha():Shuffle("691470258A3",1)+"OK Esperado: 1234567890A"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('0741A852B963',1)=>"+Embaralha():Shuffle("0741A852B963",1)+"OK Esperado: 1234567890AB"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('741A852B963C0',1)=>"+Embaralha():Shuffle('741A852B963C0',1)+"OK Esperado: 1234567890ABC"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('48B159C260D37A',1)=>"+Embaralha():Shuffle('48B159C260D37A',1)+"OK Esperado: 1234567890ABCD"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('8B159C260D37AE4',1)=>"+Embaralha():Shuffle('8B159C260D37AE4',1)+"OK Esperado: 1234567890ABCDE"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('C951D062EA73FB84',1)=>"+Embaralha():Shuffle('C951D062EA73FB84',1)+"OK Esperado: 1234567890ABCDEF"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('951D062EA73FB84GC',1)=>"+Embaralha():Shuffle('951D062EA73FB84GC',1)+"OK Esperado: 1234567890ABCDEFG"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('50E16AF27BG38CH49D',1)=>"+Embaralha():Shuffle('50E16AF27BG38CH49D',1)+"OK Esperado: 1234567890ABCDEFGH"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('0E16AF27BG38CH49DI5',1)=>"+Embaralha():Shuffle('0E16AF27BG38CH49DI5',1)+"OK Esperado: 1234567890ABCDEFGHI"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('FA61GB72HC83ID94JE05',1)=>"+Embaralha():Shuffle('FA61GB72HC83ID94JE05',1)+"OK Esperado: 1234567890ABCDEFGHIJ"+cCRLF
+
+    cEmbaralha+="Embaralha():Shuffle('A61GB72HC83ID94JE05KF',1)=>"+Embaralha():Shuffle("A61GB72HC83ID94JE05KF",1)+"OK Esperado: 1234567890ABCDEFGHIJK"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('6BH17CI28DJ39EK40FL5AG',1)=>"+Embaralha():Shuffle("6BH17CI28DJ39EK40FL5AG",1)+"OK Esperado: 1234567890ABCDEFGHIJKL"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('BH17CI28DJ39EK40FL5AGM6',1)=>"+Embaralha():Shuffle("BH17CI28DJ39EK40FL5AGM6",1)+"OK Esperado: 1234567890ABCDEFGHIJKLM"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('IC71JD82KE93LF04MGA5NHB6',1)=>"+Embaralha():Shuffle("IC71JD82KE93LF04MGA5NHB6",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMN"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('C71JD82KE93LF04MGA5NHB6OI',1)=>"+Embaralha():Shuffle("C71JD82KE93LF04MGA5NHB6OI",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNO"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('7DK18EL29FM30GN4AHO5BIP6CJ',1)=>"+Embaralha():Shuffle("7DK18EL29FM30GN4AHO5BIP6CJ",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOP"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('DK18EL29FM30GN4AHO5BIP6CJQ7',1)=>"+Embaralha():Shuffle("DK18EL29FM30GN4AHO5BIP6CJQ7",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQ"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('LE81MF92NG03OHA4PIB5QJC6RKD7',1)=>"+Embaralha():Shuffle("LE81MF92NG03OHA4PIB5QJC6RKD7",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQR"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('E81MF92NG03OHA4PIB5QJC6RKD7SL',1)=>"+Embaralha():Shuffle("E81MF92NG03OHA4PIB5QJC6RKD7SL",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRS"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('8FN19GO20HP3AIQ4BJR5CKS6DLT7EM',1)=>"+Embaralha():Shuffle("8FN19GO20HP3AIQ4BJR5CKS6DLT7EM",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRST"+cCRLF
+
+    cEmbaralha+="Embaralha():Shuffle('FN19GO20HP3AIQ4BJR5CKS6DLT7EMU8',1)=>"+Embaralha():Shuffle("FN19GO20HP3AIQ4BJR5CKS6DLT7EMU8",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRSTU"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('OG91PH02QIA3RJB4SKC5TLD6UME7VNF8',1)=>"+Embaralha():Shuffle("OG91PH02QIA3RJB4SKC5TLD6UME7VNF8",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRSTUV"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('G91PH02QIA3RJB4SKC5TLD6UME7VNF8WO',1)=>"+Embaralha():Shuffle("G91PH02QIA3RJB4SKC5TLD6UME7VNF8WO",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRSTUVW"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('9HQ10IR2AJS3BKT4CLU5DMV6ENW7FOX8GP',1)=>"+Embaralha():Shuffle("9HQ10IR2AJS3BKT4CLU5DMV6ENW7FOX8GP",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRSTUVWX"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('HQ10IR2AJS3BKT4CLU5DMV6ENW7FOX8GPY9',1)=>"+Embaralha():Shuffle("HQ10IR2AJS3BKT4CLU5DMV6ENW7FOX8GPY9",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRSTUVWXY"+cCRLF
+    cEmbaralha+="Embaralha():Shuffle('RI01SJA2TKB3ULC4VMD5WNE6XOF7YPG8ZQH9',1)=>"+Embaralha():Shuffle("RI01SJA2TKB3ULC4VMD5WNE6XOF7YPG8ZQH9",1)+"OK Esperado: 1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"+cCRLF
+
+    eecView(cEmbaralha,"DNA.TECH :: Desembaralhado")
 
 return
