@@ -3,6 +3,14 @@
    Entries may not always be in chronological/commit order.
    See license at the end of file. */
 
+2024-11-22 12:02 UTC naldodj
+  + bin/3rdpatch.hb
+  + bin/check.hb
+  + bin/commit.hb
+  + bin/findnoasciicharacters.ps1
+  + bin/harbour.ucf
+  + bin/tolower.ps1
+
 2024-11-22 11:55 UTC naldodj
   * src/harbour/embaralha.prg
   * src/tlpp/embaralha.tlpp
