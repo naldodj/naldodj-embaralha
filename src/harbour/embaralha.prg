@@ -210,7 +210,7 @@ static function __GetShuffleMap(nLen)
         even(Space(nLen),0,nLen,@aMap)
         hb_HSet(hHMMap,nLen,aClone(aMap))
     endif
-return(aClone(aMap)) as array
+return(aMap) as array
 
 /*
     cCRLF:=chr(13)+chr(10)
