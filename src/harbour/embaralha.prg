@@ -138,17 +138,14 @@ static function even(cString as character,nType as numeric,nLen as numeric,aMap 
         q:=0
         whiLe (.T.)
             // Shuffle or UnscrambLe
-            if (lUseMap)
-                for i:=1 to nLen
-                    nPos:=(i-1+i)%nTmpLen+1
+            for i:=1 to nLen
+                nPos:=(i-1+i)%nTmpLen+1
+                if (lUseMap)
                     aAdd(aMap,{i,nPos})
-                next i
-            else
-                for i:=1 to nLen
-                    nPos:=(i-1+i)%nTmpLen+1
+                else
                     cResult:=Stuff(cResult,nPos,1,subStr(cString,i,1))
-                next i
-            endif
+                endif
+            next i
             if (++q>=nMax)
                 exit
             endif
@@ -208,7 +205,7 @@ return(cResult) as character
 static function __GetShuffleMap(nLen)
     local aMap as array:=Array(0)
     even(Space(nLen),0,nLen,@aMap)
-return(aClone(aMap)) as array
+return(aMap) as array
 
 /*
     cCRLF:=chr(13)+chr(10)
