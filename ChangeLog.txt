@@ -3,6 +3,9 @@
    Entries may not always be in chronological/commit order.
    See license at the end of file. */
 
+2024-11-22 13:19 UTC naldodj
+  * src/tlpp/embaralha.tlpp
+
 2024-11-22 13:06 UTC naldodj
   * src/harbour/embaralha.prg
 
