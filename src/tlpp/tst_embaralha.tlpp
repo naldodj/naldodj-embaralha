@@ -5,7 +5,7 @@ using namespace dna.tech
 procedure u_TstEmbaralha()
 
     local cCRLF:=CRLF
-    local cEmbaralha as character
+    local cEmbaralha,cDesembaralha as character
 
     cEmbaralha:="Embaralha('1',0)=> "+Embaralha("1",0)+cCRLF
     cEmbaralha+="Embaralha('12',0)=> "+Embaralha("12",0)+cCRLF
@@ -169,10 +169,30 @@ procedure u_TstEmbaralha()
 
     eecView(cEmbaralha,"DNA.TECH x TOTVS")
 
-    cEmbaralha:="RI01SJA2TKB3ULC4VMD5WNE6XOF7YPG8ZQH9"+Replicate("0",100)
-    MsAguarde({||aEval(Array(701512),{||cEmbaralha:=__Soma1(cEmbaralha)})})
-    cEmbaralha:="Embaralha():Shuffle("+cEmbaralha+",0)==Embaralha("+cEmbaralha+",0)=> "+allToChar(Embaralha():Shuffle(cEmbaralha,0)==Embaralha(cEmbaralha,0))+cCRLF
 
-    eecView(cEmbaralha,"DNA.TECH x TOTVS")
+    MsAguarde({||cEmbaralha:=getBigString()})
+    cEmbaralha:="Embaralha():Shuffle("+cEmbaralha+",0)==Embaralha("+cEmbaralha+",0)=> "+allToChar((cDesembaralha:=Embaralha():Shuffle(cEmbaralha,0))==Embaralha(cEmbaralha,0))+cCRLF
+    eecView(cEmbaralha,"DNA.TECH x TOTVS :: Embaralha")
+
+    cEmbaralha:="Embaralha():Shuffle("+cDesembaralha+",1)==Embaralha("+cDesembaralha+",1)=> "+allToChar((Embaralha():Shuffle(cDesembaralha,1))==Embaralha(cDesembaralha,1))+cCRLF
+    eecView(cEmbaralha,"DNA.TECH x TOTVS :: Desembaralha")
 
 return
+
+static function getBigString(nSize as numeric) as character
+
+    local cRandom as character
+    local cBigString as character
+    local i,nPos as numeric
+
+    DEFAULT nSize:=1512
+
+    cBigString:=Replicate("0",nSize)
+
+    for i:=1 to nSize
+        nPos:=(i-1+i)%nSize+1
+        cRandom:=LTrim(Str(Randomize(1,9)))
+        cBigString:=Stuff(cBigString,nPos,1,cRandom)
+    next i
+
+return(cBigString)
