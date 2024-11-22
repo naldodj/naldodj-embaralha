@@ -127,5 +127,9 @@ return(cResult)
 
 static function __GetShuffleMap(nLen) as array
     local aMap:=Array(0) as array
-    even(Space(nLen),0,nLen,@aMap)
+    static oHMMap:=tHashMap():New() as object
+    if (!oHMMap:Get(nLen,@aMap))
+        even(Space(nLen),0,nLen,@aMap)
+        oHMMap:Set(nLen,aClone(aMap))
+    endif
 return(aMap)

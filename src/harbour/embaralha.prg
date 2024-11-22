@@ -204,8 +204,13 @@ return(cResult) as character
 
 static function __GetShuffleMap(nLen)
     local aMap as array:=Array(0)
-    even(Space(nLen),0,nLen,@aMap)
-return(aMap) as array
+    thread static hHMMap as hash
+    hb_default(@hHMMap,{=>})
+    if ((!hb_HHasKey(hHMMap,nLen)).or.(Empty(aMap:=hb_HGet(hHMMap,nLen,aMap))))
+        even(Space(nLen),0,nLen,@aMap)
+        hb_HSet(hHMMap,nLen,aClone(aMap))
+    endif
+return(aClone(aMap)) as array
 
 /*
     cCRLF:=chr(13)+chr(10)
