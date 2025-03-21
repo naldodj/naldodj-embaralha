@@ -490,8 +490,10 @@ STATIC FUNCTION CheckFile( cName, /* @ */ aErr, lApplyFixes, cLocalRoot, lRebase
 
    LOCAL aCanHaveNoExtension := { ;
       ".*", ;
-      "Makefile", ;
-      "debian/*" }
+      "Makefile",;
+      "debian/*",;
+      "LICENSE";
+   }
 
    LOCAL aCanHaveTab := { ;
       "Makefile", ;
