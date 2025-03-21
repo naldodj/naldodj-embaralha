@@ -1,4 +1,9 @@
-/*Released to Public Domain.*/
+/*
+
+Shuffle. Based on the Harbour/TLPP versions, it was crafted through a collaborative effort by Naldo DJ and Grok after numerous iterations and adjustments.
+
+Released to Public Domain.
+*/
 
 class Embaralha {
   private static positionMap: Map<number, number[][]> = new Map();
